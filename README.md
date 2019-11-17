@@ -47,7 +47,7 @@ Vulnerability #1: **Insecure Direct Object Reference (IDOR)** -When a user of th
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/IDOR1.png" />
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/IDOR2.png" />
 
-Vulnerability #2: **Cross-Site Request Forgery (CSRF)** - When an attacker creates a hidden form with the same input action as the original form used to update something in the database by a logged in user, it can change the database input on page load. all one has to do is host the html form somewhere and get the admin to visit this page. in this cas I have just had the form in my local folder directory and made the logged in red user visit the page to get Alabama to beocme Alabamaaaa.
+Vulnerability #2: **Cross-Site Request Forgery (CSRF)** - When an attacker creates a hidden form with the same input action as the original form used to update something in the database by a logged in user, it can change the database input on page load. all one has to do is host the html form somewhere and get the admin to visit this page. in this cas I have just had the form in my local folder directory and made the logged in red user visit the page to get Alabama to beocme Alabamaaaa. This is possible because the red page isnt verifying the Csrf token while the other pages are.
 
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/CSRF1.png" />
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/CSRF2.png" />
@@ -57,4 +57,4 @@ Vulnerability #2: **Cross-Site Request Forgery (CSRF)** - When an attacker creat
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+It took a lot of time to get all of these as it was challenging running tests on all pages when you don't know where to look. I also had more problems with SQLI than I thought I would as the sleep injection was the only one I could get to work. 
