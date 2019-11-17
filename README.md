@@ -47,7 +47,7 @@ Vulnerability #1: **Insecure Direct Object Reference (IDOR)** -When a user of th
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/IDOR1.png" />
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/IDOR2.png" />
 
-Vulnerability #2: **Cross-Site Request Forgery (CSRF)** -
+Vulnerability #2: **Cross-Site Request Forgery (CSRF)** - 
 
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/CSRF1.png" />
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/CSRF2.png" />
