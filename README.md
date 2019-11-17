@@ -26,6 +26,7 @@ Vulnerability #2: **SQL injection.** -When on the SalesPerson page, you can jump
 Vulnerability #1: **Username Enumeration** -When I created a user with the name tester, and tried to log in to this page using that username and a bad password, the unsuccessful login text was in bold letters. When I tried logging in with a username I knew wassnt in the database, I got an unsuccessful login text with no bold letters. In this way one can find out what valid usernames are. 
 
 Vulnerability #2: **Cross-Site Scripting (XSS)** -When filling out the Feedback form you're allowed to enter html tags ingto the feedback field. when one goes to the feedback page as a logged in user, the script is run and the XSS is executed. 
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/XSS1.png" /> <img src="https://github.com/ThoMot/CodePathLab9/blob/master/XSS2.png" />
 
 
 
