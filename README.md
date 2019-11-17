@@ -1,6 +1,6 @@
 # Project 8 - Pentesting Live Targets
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 > Objective: Identify vulnerabilities in three different versions of the Globitek website: blue, green, and red.
 
@@ -16,23 +16,24 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 
 ## Blue
 
-Vulnerability #1: __________________
+Vulnerability #1: **Session highjacking** -When using the script provided to get the session ID from the logged in user, it can be passed to the attacker which then can use burp to forward this session cookie, and then get logged in to the users account using the hijacked session ID. 
 
-Vulnerability #2: __________________
+Vulnerability #2: **SQL injection.** -When on the SalesPerson page, you can jump from salesperson to salesperson using their IDs. When putting in a ' after the id we get a Database request error. this seems to indicate we can do an injecton here. When trying to sleep the database using ' OR SLEEP(10)=0--' the database is delayed getting the response. I tried getting the database to return some values to me, but I could not get this to work. 
 
 
 ## Green
 
-Vulnerability #1: __________________
+Vulnerability #1: **Username Enumeration** -When I created a user with the name tester, and tried to log in to this page using that username and a bad password, the unsuccessful login text was in bold letters. When I tried logging in with a username I knew wassnt in the database, I got an unsuccessful login text with no bold letters. In this way one can find out what valid usernames are. 
 
-Vulnerability #2: __________________
+Vulnerability #2: **Cross-Site Scripting (XSS)** -When filling out the Feedback form you're allowed to enter html tags ingto the feedback field. when one goes to the feedback page as a logged in user, the script is run and the XSS is executed. 
+
 
 
 ## Red
 
-Vulnerability #1: __________________
+Vulnerability #1: **Insecure Direct Object Reference (IDOR)** -When a user of the site looks at the sales person tab and tries changing the ID of the sales person in the URL they are able to access sales people that are not public. ID=10 and ID=11 gives us a user that is not public yet and one that is fired for stealing. 
 
-Vulnerability #2: __________________
+Vulnerability #2: **Cross-Site Request Forgery (CSRF)** -
 
 
 ## Notes
