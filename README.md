@@ -47,10 +47,12 @@ Vulnerability #1: **Insecure Direct Object Reference (IDOR)** -When a user of th
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/IDOR1.png" />
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/IDOR2.png" />
 
-Vulnerability #2: **Cross-Site Request Forgery (CSRF)** - 
+Vulnerability #2: **Cross-Site Request Forgery (CSRF)** - When an attacker creates a hidden form with the same input action as the original form used to update something in the database by a logged in user, it can change the database input on page load. all one has to do is host the html form somewhere and get the admin to visit this page. in this cas I have just had the form in my local folder directory and made the logged in red user visit the page to get Alabama to beocme Alabamaaaa.
 
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/CSRF1.png" />
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/CSRF2.png" />
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/CSRF3.png" />
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/CSRF4.png" />
 
 
 ## Notes
