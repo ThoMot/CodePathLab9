@@ -16,10 +16,17 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 
 ## Blue
 
-Vulnerability #1: **Session highjacking** -When using the script provided to get the session ID from the logged in user, it can be passed to the attacker which then can use burp to forward this session cookie, and then get logged in to the users account using the hijacked session ID. 
+Vulnerability #1: **Session highjacking** -When using the script provided to get the session ID from the logged in user, it can be passed to the attacker which then can use the same tool to set their session ID to the same thing and when they go back to the page they will be logged in using the other users session.
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/session1.png" /> 
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/session2.png" /> 
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/session3.png" /> 
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/session4.png" /> 
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/session5.png" /> 
+
 
 Vulnerability #2: **SQL injection.** -When on the SalesPerson page, you can jump from salesperson to salesperson using their IDs. When putting in a ' after the id we get a Database request error. this seems to indicate we can do an injecton here. When trying to sleep the database using ' OR SLEEP(10)=0--' the database is delayed getting the response. I tried getting the database to return some values to me, but I could not get this to work. 
-
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/SQLI1.png" /> 
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/SQLI2.png" /> 
 
 ## Green
 
@@ -35,7 +42,8 @@ Vulnerability #2: **Cross-Site Scripting (XSS)** -When filling out the Feedback 
 
 ## Red
 
-Vulnerability #1: **Insecure Direct Object Reference (IDOR)** -When a user of the site looks at the sales person tab and tries changing the ID of the sales person in the URL they are able to access sales people that are not public. ID=10 and ID=11 gives us a user that is not public yet and one that is fired for stealing. 
+Vulnerability #1: **Insecure Direct Object Reference (IDOR)** -When a user of the site looks at the sales person tab and tries changing the ID of the sales person in the URL they are able to access sales people that are not public. ID=10 and ID=11 gives us a user that is not public yet and one that is fired for stealing. The other pages redirect back to another page if an illegal id request is made.
+
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/IDOR1.png" />
 <img src="https://github.com/ThoMot/CodePathLab9/blob/master/IDOR2.png" />
 
