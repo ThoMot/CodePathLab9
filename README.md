@@ -24,17 +24,25 @@ Vulnerability #2: **SQL injection.** -When on the SalesPerson page, you can jump
 ## Green
 
 Vulnerability #1: **Username Enumeration** -When I created a user with the name tester, and tried to log in to this page using that username and a bad password, the unsuccessful login text was in bold letters. When I tried logging in with a username I knew wassnt in the database, I got an unsuccessful login text with no bold letters. In this way one can find out what valid usernames are. 
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/UsEnum1.png" />
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/UsEnum2.png" />
 
 Vulnerability #2: **Cross-Site Scripting (XSS)** -When filling out the Feedback form you're allowed to enter html tags ingto the feedback field. when one goes to the feedback page as a logged in user, the script is run and the XSS is executed. 
-<img src="https://github.com/ThoMot/CodePathLab9/blob/master/XSS1.png" /> <img src="https://github.com/ThoMot/CodePathLab9/blob/master/XSS2.png" />
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/XSS1.png" /> 
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/XSS2.png" />
 
 
 
 ## Red
 
 Vulnerability #1: **Insecure Direct Object Reference (IDOR)** -When a user of the site looks at the sales person tab and tries changing the ID of the sales person in the URL they are able to access sales people that are not public. ID=10 and ID=11 gives us a user that is not public yet and one that is fired for stealing. 
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/IDOR1.png" />
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/IDOR2.png" />
 
 Vulnerability #2: **Cross-Site Request Forgery (CSRF)** -
+
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/CSRF1.png" />
+<img src="https://github.com/ThoMot/CodePathLab9/blob/master/CSRF2.png" />
 
 
 ## Notes
